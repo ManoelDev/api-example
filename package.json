@@ -32,7 +32,9 @@
     "build": "tsc",
     "dev:server": "tsnd -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn --quiet --no-notify src/server.ts",
     "typeorm": "tsnd ./node_modules/typeorm/cli.js",
-    "test": "jest"
+    "test": "jest --passWithNoTests --silent --noStackTrace",
+    "test:unit": "yarn test --watch",
+    "test:staged": "yarn test --findRelatedTests"
   },
   "dependencies": {
     "@types/cors": "^2.8.8",
