@@ -1,4 +1,4 @@
-import User from '../entities/Users';
+import User from '@database/entities/Users';
 import CreateUserDTO from '../dtos/CreateUserDTO';
 
 export default interface IUserRepository {

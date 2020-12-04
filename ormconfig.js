@@ -9,7 +9,7 @@ module.exports = [
     "password": process.env.POSTGRES_PASS,
     "database": process.env.POSTGRES_DATA,
     "logging": false,
-    "entities": ["./src/modules/**/entities/*.ts"],
+    "entities": ["./src/database/entities/*.ts"],
     "migrations": ["./src/database/migrations/*.ts"],
     "cli": { "migrationsDir": "./src/database/migrations" }
   }

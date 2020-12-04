@@ -2,8 +2,8 @@ import AppError from '@src/errors/AppError';
 import { sign } from 'jsonwebtoken';
 import IHashProvider from '@src/providers/HashPassword/models/IHashProvider';
 import BCryptHashProvider from '@src/providers/HashPassword/implementations/HashProvider';
+import User from '@database/entities/Users';
 import UserRepository from '../repositories/UserRepository';
-import User from '../entities/Users';
 import IUserRepository from '../repositories/IUserRepository';
 
 interface Request {
