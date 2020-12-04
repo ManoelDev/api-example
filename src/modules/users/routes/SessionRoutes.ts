@@ -4,6 +4,6 @@ import AuthController from '@modules/users/controllers/AuthController';
 const authRoutes = Router();
 const authController = new AuthController();
 
-authRoutes.post('/', authController.create);
+authRoutes.post('/sessions', authController.create);
 
 export default authRoutes;
