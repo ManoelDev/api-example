@@ -10,7 +10,7 @@ export default class CreateCategories1606872595917 implements MigrationInterface
 
           { name: 'name', type: 'varchar' },
           { name: 'description', type: 'varchar' },
-          { name: 'status', type: 'varchar' },
+          { name: 'status', type: 'varchar', isNullable: true },
 
           { name: 'created_at', type: 'timestamp', default: 'now()' },
           { name: 'updated_at', type: 'timestamp', default: 'now()' },

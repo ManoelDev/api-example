@@ -1,7 +1,7 @@
 import AppError from '@src/errors/AppError';
 import { sign } from 'jsonwebtoken';
 import IHashProvider from '@src/providers/HashPassword/models/IHashProvider';
-import BCryptHashProvider from '@src/providers/HashPassword/implementations/HashProvider';
+import HashProvider from '@src/providers/HashPassword/implementations/HashProvider';
 import User from '@database/entities/Users';
 import UserRepository from '../repositories/UserRepository';
 import IUserRepository from '../repositories/IUserRepository';
@@ -23,7 +23,7 @@ export default class AuthenticationService {
 
   constructor(userRepository: UserRepository) {
     this.userRepository = userRepository;
-    this.hashPRovider = new BCryptHashProvider();
+    this.hashPRovider = new HashProvider();
   }
 
   public async execute({ email, password }: Request): Promise<IResponse> {
