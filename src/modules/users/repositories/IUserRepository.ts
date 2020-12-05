@@ -1,5 +1,5 @@
 import User from '@database/entities/Users';
-import CreateUserDTO from '../dtos/CreateUserDTO';
+import CreateUserDTO from '../dtos/ICreateUserDTO';
 
 export default interface IUserRepository {
   findByEmail(email: string): Promise<User | undefined>;
